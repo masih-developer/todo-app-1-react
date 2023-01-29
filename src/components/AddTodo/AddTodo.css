@@ -109,3 +109,33 @@
     align-items: center;
     flex-direction: column;
 }
+
+@media only screen and (max-width: 480px) {
+    .add-todo-wrapper {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .add-todo__add-btn {
+        width: 100%;
+        margin: 0;
+    }
+
+    .todos-status {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .todo-status__title {
+        font-size: 25px;
+    }
+
+    .todos-filter-wrapper {
+        margin-top: 30px;
+        align-self: flex-start;
+    }
+
+    .todos-filter-wrapper .todo-status__title {
+        font-size: 18px;
+    }
+}
