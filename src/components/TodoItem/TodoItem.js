@@ -18,8 +18,8 @@ export default class TodoItem extends Component {
                     type="checkbox"
                     id="checkbox"
                     className="tood__item__checkbox"
-                    onClick={(e) => this.checkedHandler(this.props.id, e)}
-                    checked={this.props.isCompleted ? true : false}
+                    onChange={(e) => this.checkedHandler(this.props.id, e)}
+                    checked={this.props.isCompleted}
                 />
                 <p className="todo__item__content">{this.props.content}</p>
                 <button

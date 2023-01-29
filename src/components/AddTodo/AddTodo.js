@@ -35,21 +35,26 @@ export default class AddTodo extends Component {
     }
 
     completeTodoHandler(todoId, isChecked) {
-        let desiredTodo = this.state.todoList.find((todo) => {
-            return todo.id === todoId;
-        });
-        desiredTodo.isCompleted = isChecked;
+        let newTodos = [...this.state.todoList];
 
-        this.setState({ todoList: [...this.state.todoList] });
+        newTodos.forEach((todo) => {
+            if (todo.id === todoId) {
+                todo.isCompleted = isChecked;
+            }
+        });
+
+        this.setState({ todoList: newTodos });
     }
 
     removeTodoHandler(todoId) {
-        let desiredTodo = this.state.todoList.findIndex((todo) => {
+        let newTodos = [...this.state.todoList];
+
+        let desiredTodo = newTodos.findIndex((todo) => {
             return todo.id === todoId;
         });
 
-        this.state.todoList.splice(desiredTodo, 1);
-        this.setState({ todoList: [...this.state.todoList] });
+        newTodos.splice(desiredTodo, 1);
+        this.setState({ todoList: newTodos });
     }
 
     showFilteredTodos(event) {
