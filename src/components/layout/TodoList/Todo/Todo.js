@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./TodoItem.css";
+import "./Todo.css";
 import { HiOutlineTrash } from "react-icons/hi";
 
 export default class TodoItem extends Component {

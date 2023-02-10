@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "./AddTodo.css";
+import "./TodoList.css";
 import { BiPlusCircle } from "react-icons/bi";
-import EmptyTodoWrapper from "../EmptyTodoWrapper/EmptyTodoWrapper";
-import TodoItem from "../TodoItem/TodoItem";
+import EmptyTodoWrapper from "./EmptyTodoWrapper/EmptyTodoWrapper";
+import TodoItem from "./Todo/Todo";
 
 export default class AddTodo extends Component {
     constructor(props) {
